@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
 
-function App() {
+import "./App.css";
+import CustomLocation from "./Components/CustomLocation";
+import WApp from "./App2";
+import Notfound from "./Components/NotFound";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="text-4xl p-4 w-1/3 text-center mx-auto bg-green-100 ring-2 ring-green-400 m-4">
+        Weather App
+      </div>
+      <Routes>
+        <Route path="/" element={<WApp />}></Route>
+        <Route
+          path="/:city"
+          element={<CustomLocation></CustomLocation>}
+        ></Route>
+        <Route path="*" element={<Notfound></Notfound>}></Route>
+      </Routes>
     </div>
   );
 }
-
-export default App;
