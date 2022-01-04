@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Graph from "./Graph";
 import WeatherCard from "./WeatherCard";
 
-const API_KEY = "AIzaSyCk5Gv7Zlgqetj_19Cr8LD-n0rYt5L2_Mg";
-const weather_KEY = "1925d6c1207e47f94cefa0d29ee7c216";
+const API_KEY = process.env.REACT_APP_GOOGLE_API;
+const weather_KEY = process.env.REACT_APP_API_KEY;
 
 export default function CustomLocation() {
   let params = useParams();
@@ -62,7 +62,7 @@ export default function CustomLocation() {
           </div>
         )}
       </div>
-      <div className="text-center text-xl ">Next 7 days forecast: </div>
+      <div className="text-center text-xl ">Next 5 days forecast: </div>
       <div className="md:w-2/3 mx-auto lg:w-1/2">
         <div>
           {forecast.daily.length <= 1

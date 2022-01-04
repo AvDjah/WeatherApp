@@ -6,10 +6,10 @@ import WeatherCard from "./Components/WeatherCard";
 import SearchBar from "./Components/SearchBar";
 import { useParams } from "react-router-dom";
 import { data } from "autoprefixer";
-import { API_KEY } from "./apikey";
+// import { API_KEY } from "./apikey";1
 
 function WApp() {
-  // const API_KEY = "1925d6c1207e47f94cefa0d29ee7c216";
+  const API_KEY = process.env.REACT_APP_API_KEY;
 
   let params = useParams();
   // console.log("params:", params);

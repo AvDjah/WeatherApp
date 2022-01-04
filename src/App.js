@@ -6,6 +6,9 @@ import WApp from "./App2";
 import Notfound from "./Components/NotFound";
 
 export default function App() {
+  console.log("E:", process.env);
+  console.log("ER:", process.env.REACT_APP_GOOGLE_API);
+
   return (
     <div>
       <div className="text-4xl p-4 w-1/3 text-center mx-auto bg-green-100 ring-2 ring-green-400 m-4">

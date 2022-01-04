@@ -2,9 +2,9 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { GOOGLE_API as API_KEY } from "../apikey";
-// const API_KEY = "AIzaSyCk5Gv7Zlgqetj_19Cr8LD-n0rYt5L2_Mg";
-// const weather_KEY = "1925d6c1207e47f94cefa0d29ee7c216";
+// import { GOOGLE_API as API_KEY } from "../apikey";
+const API_KEY = process.env.REACT_APP_GOOGLE_API;
+const weather_KEY = process.env.REACT_APP_API_KEY;
 export default function SearchBar() {
   const navigate = useNavigate();
 
